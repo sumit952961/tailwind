@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tail Wind REsponsive Demo</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: azure;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        @media(min-width:1000px){
+            .header1{
+            height: 68px;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 0 2px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header{
+            display: none;
+        }
+        .hleft{
+            height: 68px;
+            width: auto;
+            display: flex;
+            margin-left: 5%;
+            align-items: center;
+            gap: 10px;
+            /* border: 2px solid black; */
+
+        }
+       
+        .logo{
+            height: 40px;
+            width: 40px;
+            background-color: rgb(84, 186, 226);
+            border-radius: 10px;
+            /* margin-top: 12px; */
+        }
+        .mysite{
+            font-family:sans-serif;
+            font-size: 22px;
+            /* margin-top: 21px; */
+            /* font-weight: 550; */ 
+        }
+        .hright{
+            height: 100%;
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .anchor a{
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.786);
+            font-family: sans-serif;
+            font-size: 17px;
+            margin-left:20px;
+        }
+        .button{
+            height:100%;
+            width: 40%;
+            /* background-color: aqua; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .button button{
+            height: 40px;
+            width: 85px;
+            border: none;
+            border-radius: 5px;
+            font-size: 17px;
+            background-color: rgb(84, 186, 226);
+            color: #fff;
+            /* margin-left:40%; */
+
+        }
+        
+        .menu{
+            display: none;
+        }
+        
+        
+        }
+        @media(max-width:1000px){
+            .header{
+            height: 68px;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 0 2px;
+            overflow: hidden;
+            border: 2px solid black;
+            }
+            .hleft{
+            height:68px;
+            width: auto;
+            display: flex;
+            margin-left: 5%;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border: 2px solid black;
+
+            }
+            .logo{
+            height: 40px;
+            width: 40px;
+            background-color: rgb(84, 186, 226);
+            border-radius: 10px;
+            /* margin-top: 12px; */
+            }
+            .mysite{
+            font-family:sans-serif;
+            font-size: 22px;
+            /* margin-top: 21px; */
+            /* font-weight: 550; */ 
+            }
+            .hright{
+                display: none;
+            }
+         
+            .box button{
+                height: 30px;
+                width: 30px;
+                border-radius: 10px;
+                border: none;
+                background-color: white;
+                color: white;
+                margin-right: 12%;
+                margin-top:18px;
+            }
+            .menu img{
+               height: 100%;
+               width: 100%;
+            }
+             
+            .header1{
+             display: none;
+            }
+            
+            .small{
+                height: 68px;
+            width: 100%;
+            background-color: #fff;
+            /* box-shadow: 0 0 2px; */
+            display: flex;
+            justify-content: space-between;
+            border: 2px solid black;
+
+            }
+            .home{
+                height:40px;
+                width: 100%;
+                display: flex;
+                align-items:end ;
+            }
+            .home a{
+                text-decoration: none;
+                color: rgba(0, 0, 0, 0.786);
+                font-size: 17px;
+                font-family: sans-serif;
+                margin-left:2%;
+                
+            }
+            .sign{
+                height:55px;
+                width: 100%;
+                /* background-color: rgb(255, 0, 132); */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        
+            }
+            .up{
+                height: 45px;
+                width: 96%;
+
+            }
+            .sign button{
+                height: 45px;
+                width: 100%;
+                background-color: rgb(84, 186, 226);
+
+            }
+
+        }
+        .main1{
+            height: 30%;
+            width: 90%;
+            /* border: 2px solid black; */
+            margin: auto;
+            margin-top: 30px;
+            background-color: white;
+            border-radius: 10px;
+            /* box-shadow: 0 0 1px; */
+        }
+        .build{
+            height: 31.3%;
+            width: 100%;
+            font-size: 260%;
+            font-family: sans-serif;
+            font-weight: 700;
+            color: rgba(0, 0, 0, 0.771);
+            display: flex;
+            align-items: end;
+            padding-left: 25px;
+            /* border: 2px solid black; */
+
+        }
+        .response{
+            height: 27.3%;
+            width: 50%;
+            font-size: 110%;
+            font-family: sans-serif;
+            /* font-weight: 700; */
+            color: rgba(0, 0, 0, 0.699);
+            display: flex;
+            align-items: center;
+            padding-left: 25px;
+            line-height: 25px;
+            /* border: 2px solid black; */
+
+        }
+        .get{
+            height: 42.3%;
+            width: 30%;
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+        .started{
+            height:40px;
+            width: 110px;
+            background-color: rgb(84, 186, 226);
+            border-radius: 10px;
+        }
+        .started button{
+           height:100%;
+            width: 100%;
+            background-color: rgb(84, 186, 226);
+
+            border-radius: 10px; 
+            border: none;
+            color: white;
+            font-size: 18px;
+        }
+        .learn{
+            height:40px;
+            width: 110px;
+            background-color: rgb(84, 186, 226);
+            border-radius: 10px;
+        }
+        .learn button{
+           height:100%;
+            width: 100%;
+            background-color: rgb(84, 186, 226);
+
+            border-radius: 10px; 
+            border: none;
+            color: white;
+            font-size: 18px;
+        }
+        
+        
+       
+        
+    </style>
+</head>
+<body>
+    <div class="header1 "  >
+        <div class="hleft">
+            <div class="logo"></div>
+            <div class="mysite"> MySite</div>
+        </div>
+        <div class="hright">
+            <div class="anchor">
+                <a href="">Home</a>
+                <a href="">Featuring</a>
+                <a href="">Pricing</a>
+            </div>
+            <div class="button">
+                <button>Sign up</button>
+            </div>
+        </div>
+    </div>
+    <div class="header box" id="myBox" >
+        <div class="small">
+            <div class="hleft">
+                <div class="logo"></div>
+                <div class="mysite"> MySite</div>
+            </div>
+            <button class="menu" onclick="toggleHeight()"><img src="menu.png" alt=""></button>
+            
+        </div>
+        <div class="home">
+            <a href="">Home</a>
+        </div>
+        <div class="home">
+            <a href="">Featuring</a>
+        </div>
+        <div class="home">
+            <a href="">Pricing</a>
+
+        </div>
+        <div class="sign">
+            <div class="up">
+               <button>Sign up</button> 
+            </div>
+        </div>
+    </div>
+    <div class="main1">
+        <div class="build">
+            Build faster with Tailwind
+        </div>
+        <div class="response">
+            Responsive utilities let you control layout at each breakpoint. Mobile-first means smaller screens inherit default styles
+        </div>
+        <div class="get">
+            <div class="started">
+                <button>Get started</button>
+            </div>
+            <div class="learn">
+                <button>Learn more</button>
+            </div>
+        </div>
+    </div>
+      <script>
+    let isTall = false; // track height state
+
+    function toggleHeight() {
+      const box = document.getElementById('myBox');
+
+      if (!isTall) {
+        box.style.height = (box.offsetHeight + 200) + 'px'; // increase height
+      } else {
+        box.style.height = (box.offsetHeight - 200) + 'px'; // decrease height
+      }
+
+      isTall = !isTall; // toggle state
+    }
+  </script>
+</body>
+</html>
